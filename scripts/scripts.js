@@ -2,6 +2,8 @@ const button = document.querySelector('#randomize');
 let card = document.querySelector('#card');
 let instructions = document.querySelector('#instructions');
 
+let viewCards = document.querySelector('.viewCards');
+
 let randomArray = [
   'Two is You!',
   'Two is You!',
@@ -131,7 +133,7 @@ button.addEventListener('click', () => {
 
   usedCards.push(cardArray[number]);
 
-  console.log(usedCards);
+  viewCards.innerHTML += `<img src=images/${cardArray[number]}.png alt='card'>`;
 
   instructions.innerHTML = randomArray[number];
 });
