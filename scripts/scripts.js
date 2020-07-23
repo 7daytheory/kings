@@ -4,6 +4,18 @@ let instructions = document.querySelector('#instructions');
 
 let viewCards = document.querySelector('.viewCards');
 
+let used = document.querySelector('#used');
+let cardsWrap = document.querySelector('#viewCardsWrap');
+
+used.addEventListener('click', () => {
+  console.log('Clicked!');
+  if (cardsWrap.style.display == 'none') {
+    cardsWrap.style.display = 'block';
+  } else {
+    cardsWrap.style.display = 'none';
+  }
+});
+
 let randomArray = [
   'Two is You!',
   'Two is You!',

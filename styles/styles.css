@@ -27,17 +27,19 @@
   font-size: 1.25em;
   background: #333;
   color: #fff;
-  padding: 5px 10px 5px 35px;
+  padding: 5px 10px 5px 10px;
   position: absolute;
-  left: -25px;
   top: 25px;
   cursor: pointer;
 }
 
 .sideBtn:hover {
-  left: 0px;
   opacity: 0.9;
-  transition-duration: 1s;
+}
+
+#viewCardsWrap {
+  position: absolute;
+  z-index: 9999;
 }
 
 .viewCards img {
@@ -45,4 +47,11 @@
   width: 100px;
   height: auto;
   border: thin solid #333;
+}
+
+#closeCards {
+  top: 250px;
+  left: 0px;
+  position: absolute;
+  display: none;
 }
