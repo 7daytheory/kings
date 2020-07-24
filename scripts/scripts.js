@@ -2,6 +2,8 @@ const button = document.querySelector('#randomize');
 let card = document.querySelector('#card');
 let instructions = document.querySelector('#instructions');
 
+let numberCards = document.querySelector('.numberCards');
+
 let viewCards = document.querySelector('.viewCards');
 
 let used = document.querySelector('#used');
@@ -147,5 +149,11 @@ button.addEventListener('click', () => {
 
   viewCards.innerHTML += `<img src=images/${cardArray[number]}.png alt='card'>`;
 
+  let removed = usedCards.splice(cardArray[number]);
+
+  removed.splice();
+
   instructions.innerHTML = randomArray[number];
+
+  numberCards.innerHTML = 'Remaining Cards in Deck: ' + randomArray.length;
 });
