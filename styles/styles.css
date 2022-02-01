@@ -1,12 +1,13 @@
 .wrapper {
   text-align: center;
   width: 90%;
+  padding: 15px;
   margin: auto;
 }
 
 #card {
-  width: auto;
-  height: 75%;
+  width: 25%;
+  height: auto;
 }
 
 .btn {
@@ -62,4 +63,9 @@
   right: 5px;
   font-size: 2em;
   font-weight: bold;
+}
+
+#instructions {
+  font-weight: 400;
+  font-size: 1.5em;
 }

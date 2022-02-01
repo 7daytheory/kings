@@ -1,22 +1,10 @@
+//globals
 const button = document.querySelector('#randomize');
-let card = document.querySelector('#card');
-let instructions = document.querySelector('#instructions');
-
-let numberCards = document.querySelector('.numberCards');
-
-let viewCards = document.querySelector('.viewCards');
-
-let used = document.querySelector('#used');
-let cardsWrap = document.querySelector('#viewCardsWrap');
-
-used.addEventListener('click', () => {
-  console.log('Clicked!');
-  if (cardsWrap.style.display == 'none') {
-    cardsWrap.style.display = 'block';
-  } else {
-    cardsWrap.style.display = 'none';
-  }
-});
+const card = document.querySelector('#card');
+const instructions = document.querySelector('#instructions');
+const numberCards = document.querySelector('.numberCards');
+const viewCards = document.querySelector('.viewCards');
+const cardsWrap = document.querySelector('#viewCardsWrap');
 
 let randomArray = [
   'Two is You!',
@@ -27,10 +15,10 @@ let randomArray = [
   'Three is Me!',
   'Three is Me!',
   'Three is Me!',
-  'Touch the Floor!!!!',
-  'Touch the Floor!!!!',
-  'Touch the Floor!!!!',
-  'Touch the Floor!!!!',
+  'Touch the Floor!',
+  'Touch the Floor!',
+  'Touch the Floor!',
+  'Touch the Floor!',
   'Five is Guys!',
   'Five is Guys!',
   'Five is Guys!',
@@ -67,12 +55,13 @@ let randomArray = [
   'Rule Changer!',
   'Rule Changer!',
   'Rule Changer!',
-  'Waterfall! DRINK!',
-  'Waterfall! DRINK!',
-  'Waterfall! DRINK!',
-  'Waterfall! DRINK!',
+  'Waterfall!',
+  'Waterfall!',
+  'Waterfall!',
+  'Waterfall!',
 ];
 
+//{1, "2C", "Two is You!"},
 let cardArray = [
   '2C',
   '2D',
@@ -128,32 +117,25 @@ let cardArray = [
   'AH',
 ];
 
-let usedCards = [];
-
 button.addEventListener('click', () => {
-  let random = randomArray[Math.floor(Math.random() * randomArray.length - 1)];
-
-  let number = Math.floor(Math.random() * randomArray.length);
-
-  console.log(random);
-
-  console.log(number);
-
-  console.log(number);
-  console.log('random month =>', randomArray.length);
-  console.log('random month =>', cardArray.length);
-
-  card.src = 'images/' + cardArray[number] + '.png';
-
-  usedCards.push(cardArray[number]);
-
-  viewCards.innerHTML += `<img src=images/${cardArray[number]}.png alt='card'>`;
-
-  let removed = usedCards.splice(cardArray[number]);
-
-  removed.splice();
-
-  instructions.innerHTML = randomArray[number];
-
-  numberCards.innerHTML = 'Remaining Cards in Deck: ' + randomArray.length;
+  //Get Random number inside array length
+  let random_num = Math.ceil(Math.random() * cardArray.length - 1);
+  
+  //Get Image Src
+  card.src = 'images/' + cardArray[random_num] + '.png';
+  
+  //Change card image src to randomly picked one
+  viewCards.innerHTML += `<img src=images/${cardArray[random_num]}.png alt='card'>`;
+  
+  //Change Instructions
+  instructions.innerHTML = randomArray[random_num];
+  
+  //Remove Used card from 'deck'
+  cardArray = cardArray.filter(e => e !== cardArray[random_num]);
+  
+  //Remove object from instructions
+  randomArray = randomArray.filter(e => e !== randomArray[random_num]);
+  
+  //Update Deck
+  numberCards.innerHTML = 'Cards Remaining : ' + cardArray.length;
 });
