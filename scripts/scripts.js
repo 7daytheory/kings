@@ -6,7 +6,7 @@ const numberCards = document.querySelector('.numberCards');
 const viewCards = document.querySelector('.viewCards');
 const cardsWrap = document.querySelector('#viewCardsWrap');
 
-let randomArray = [
+let instructionArray = [
   'Two is You!',
   'Two is You!',
   'Two is You!',
@@ -61,8 +61,7 @@ let randomArray = [
   'Waterfall!',
 ];
 
-//{1, "2C", "Two is You!"},
-let cardArray = [
+let cards = [
   '2C',
   '2D',
   '2S',
@@ -117,25 +116,24 @@ let cardArray = [
   'AH',
 ];
 
+let cardArray = [cards, instructionArray];
+
 button.addEventListener('click', () => {
   //Get Random number inside array length
-  let random_num = Math.ceil(Math.random() * cardArray.length - 1);
+  let random_num = Math.ceil(Math.random() * cardArray[0].length - 1);
   
   //Get Image Src
-  card.src = 'images/' + cardArray[random_num] + '.png';
+  card.src = 'images/' + cardArray[0][random_num] + '.png';
   
   //Change card image src to randomly picked one
-  viewCards.innerHTML += `<img src=images/${cardArray[random_num]}.png alt='card'>`;
+  viewCards.innerHTML += `<img src=images/${cardArray[0][random_num]}.png alt='card'>`;
   
   //Change Instructions
-  instructions.innerHTML = randomArray[random_num];
+  instructions.innerHTML = cardArray[1][random_num];
   
   //Remove Used card from 'deck'
-  cardArray = cardArray.filter(e => e !== cardArray[random_num]);
-  
-  //Remove object from instructions
-  randomArray = randomArray.filter(e => e !== randomArray[random_num]);
+  cardArray[0] = cardArray[0].filter(e => e !== cardArray[0][random_num]);
   
   //Update Deck
-  numberCards.innerHTML = 'Cards Remaining : ' + cardArray.length;
+  numberCards.innerHTML = 'Cards Remaining : ' + cardArray[0].length;
 });
