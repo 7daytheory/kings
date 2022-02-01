@@ -1,4 +1,5 @@
-# kings
+<h1>Kings game Card-less</h1>
+<p>Creating the common "drinking game" Kings without any cards</p>
 
-<h1>Kings Card Game</h1>
-<h2>Cardless Version of Kings</h2>
+<p>Only using Javascript, HTML and CSS</p>
+
