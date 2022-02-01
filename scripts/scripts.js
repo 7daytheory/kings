@@ -61,7 +61,7 @@ let instructionArray = [
   'Waterfall!',
 ];
 
-let cards = [
+let cardArray = [
   '2C',
   '2D',
   '2S',
@@ -116,24 +116,82 @@ let cards = [
   'AH',
 ];
 
-let cardArray = [cards, instructionArray];
+let cards = [cardArray, instructionArray];
+
+/*
+let cardArray = [
+  {"2C","Two is You!"},
+  {"2D","Two is You!"},
+  {"2S","Two is You!"},
+  {"2H", "Two is You!"},
+  {"3C", "Three is Me!"},
+  {"3D", "Three is Me!"},
+  {"3S", "Three is Me!"},
+  {"3H", "Three is Me!"},
+  {"4C", "Touch the Floor!"},
+  {"4D", "Touch the Floor!"},
+  {"4S", "Touch the Floor!"},
+  {"4H", "Touch the Floor!"},
+  {"5C", "Five is Guys!"},
+  {"5D", "Five is Guys!"},
+  {"5S", "Five is Guys!"},
+  {"5H", "Five is Guys!"},
+  {"6C", "Six is Girls!"},
+  {"6D", "Six is Girls!"},
+  {"6S", "Six is Girls!"},
+  {"6H", "Six is Girls!"},
+  {"7C", 'Seven Point To Heaven!'},
+  {"7D", 'Seven Point To Heaven!'},
+  {"7S", 'Seven Point To Heaven!'},
+  {"7H", 'Seven Point To Heaven!'},
+  {"8C", 'Pick a Mate!'},
+  {"8D", 'Pick a Mate!'},
+  {"8S", 'Pick a Mate!'},
+  {"8H", 'Pick a Mate!'},
+  {"9C", 'Nine is Rhyme!'},
+  {"9D", 'Nine is Rhyme!'},
+  {"9S", 'Nine is Rhyme!'},
+  {"9H", 'Nine is Rhyme!'},
+  {"10C", "Thumb Master!"},
+  {"10D", "Thumb Master!"},
+  {"10S", "Thumb Master!"},
+  {"10H", "Thumb Master!"},
+  {"JC", "Pick a Category!"},
+  {"JD", "Pick a Category!"},
+  {"JS", "Pick a Category!"},
+  {"JH", "Pick a Category!"},
+  {"QC", "Question Master!"},
+  {"QD", "Question Master!"},
+  {"QS", "Question Master!"},
+  {"QH", "Question Master!"},
+  {"KC", "Rule Change!"},
+  {"KD", "Rule Change!"},
+  {"KS", "Rule Change!"},
+  {"KH", "Rule Change!"},
+  {"AC", "Waterfall!"},
+  {"AD", "Waterfall!"},
+  {"AS", "Waterfall!"},
+  {"AH", "Waterfall!"},
+];
+*/
+
 
 button.addEventListener('click', () => {
   //Get Random number inside array length
-  let random_num = Math.ceil(Math.random() * cardArray[0].length - 1);
+  let random_num = Math.ceil(Math.random() * cards[0].length - 1);
   
   //Get Image Src
-  card.src = 'images/' + cardArray[0][random_num] + '.png';
+  card.src = 'images/' + cards[0][random_num] + '.png';
   
   //Change card image src to randomly picked one
-  viewCards.innerHTML += `<img src=images/${cardArray[0][random_num]}.png alt='card'>`;
+  viewCards.innerHTML += `<img src=images/${cards[0][random_num]}.png alt='card'>`;
   
   //Change Instructions
-  instructions.innerHTML = cardArray[1][random_num];
+  instructions.innerHTML = cards[1][random_num];
   
   //Remove Used card from 'deck'
-  cardArray[0] = cardArray[0].filter(e => e !== cardArray[0][random_num]);
+  cards[0] = cards[0].filter(e => e !== cards[0][random_num]);
   
   //Update Deck
-  numberCards.innerHTML = 'Cards Remaining : ' + cardArray[0].length;
+  numberCards.innerHTML = 'Cards Remaining : ' + cards[0].length;
 });
