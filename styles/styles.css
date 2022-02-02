@@ -25,12 +25,12 @@
 }
 
 .sideBtn {
+  text-align: center;
   font-size: 1.25em;
   background: #333;
   color: #fff;
   padding: 5px 10px 5px 10px;
-  position: absolute;
-  top: 25px;
+  margin-top: 25px;
   cursor: pointer;
 }
 
@@ -41,13 +41,13 @@
 #viewCardsWrap {
   position: absolute;
   z-index: 9999;
+  margin-top: 25px;
 }
 
 .viewCards img {
-  margin-top: 100px;
-  width: 100px;
-  height: auto;
-  border: thin solid #333;
+  width: auto;
+  height: 90px;
+  margin:2px;
 }
 
 #closeCards {

@@ -63,6 +63,8 @@ let cardsArray = [
 
 
 button.addEventListener('click', () => {
+  
+  if(cardsArray.length - 1 > 0) {
   //Get Random number inside array length
   let random_num = Math.ceil(Math.random() * cardsArray.length - 1);
   
@@ -82,4 +84,14 @@ button.addEventListener('click', () => {
   numberCards.innerHTML = 'Cards Remaining : ' + cardsArray.length;
   
   console.log(JSON.stringify(cardsArray[random_num]));
+} else {
+  
+  //Change Instructions
+  instructions.innerHTML = "No more Cards!";
+  
+  //Update Deck
+  numberCards.innerHTML = 'Cards Remaining : 0';
+}
 });
+
+
