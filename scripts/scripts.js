@@ -5,6 +5,7 @@ const instructions = document.querySelector('#instructions');
 const numberCards = document.querySelector('.numberCards');
 const viewCards = document.querySelector('.viewCards');
 const cardsWrap = document.querySelector('#viewCardsWrap');
+const viewUsed = document.querySelector('#used');
 
 let cardsArray = [
   {card:"2C", instruction:"Two is You!"},
@@ -93,5 +94,16 @@ button.addEventListener('click', () => {
   numberCards.innerHTML = 'Cards Remaining : 0';
 }
 });
+
+viewUsed.addEventListener('click', () => {
+  console.log("clicked");
+    if(viewCardsWrap.style.display === "none") {
+        viewCardsWrap.style.display = "block";
+        viewUsed.innerHTML = "Hide used cards";
+    } else {
+      viewCardsWrap.style.display = "none";
+      viewUsed.innerHTML = "View used cards";
+    }
+})
 
 
