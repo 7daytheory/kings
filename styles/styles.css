@@ -1,3 +1,7 @@
+body {
+  font-family: "arial";
+}
+
 .wrapper {
   text-align: center;
   width: 90%;
@@ -58,10 +62,11 @@
 }
 
 .numberCards {
+  color: #666;
   position: absolute;
   top: 5px;
   right: 5px;
-  font-size: 2em;
+  font-size: 1.25em;
   font-weight: bold;
 }
 
