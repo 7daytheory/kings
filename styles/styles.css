@@ -10,8 +10,9 @@ body {
 }
 
 #card {
-  width: 25%;
+  width: 40%;
   height: auto;
+  margin-top: 15px;
 }
 
 .btn {
