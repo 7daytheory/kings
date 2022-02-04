@@ -1,16 +1,26 @@
 body {
   font-family: "arial";
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .wrapper {
   text-align: center;
-  width: 90%;
-  padding: 15px;
-  margin: auto;
+    width: 100%;
+    margin: auto;
+    background-image: url(../images/background.jpg);
+    padding: 15px;
+    border-bottom: 5px solid #333;
+}
+
+.wrapper h1 {
+  margin-top: 35px;
+  color: #FFF;
 }
 
 #card {
-  width: 40%;
+  width: 30%;
   height: auto;
   margin-top: 15px;
 }
@@ -23,6 +33,9 @@ body {
   background: #333;
   color: #fff;
   cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .btn:hover {
@@ -30,13 +43,18 @@ body {
 }
 
 .sideBtn {
-  text-align: center;
-  font-size: 1.25em;
-  background: #333;
-  color: #fff;
-  padding: 5px 10px 5px 10px;
-  margin-top: 25px;
-  cursor: pointer;
+    margin: auto;
+    text-align: center;
+    font-size: 1.25em;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    width: 50%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-top: 10px;
 }
 
 .sideBtn:hover {
@@ -44,9 +62,10 @@ body {
 }
 
 #viewCardsWrap {
+  padding: 10px 20px;
   position: absolute;
   z-index: 9999;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .viewCards img {
@@ -63,15 +82,23 @@ body {
 }
 
 .numberCards {
-  color: #666;
+  color: #FFF;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
   font-size: 1.25em;
   font-weight: bold;
 }
 
 #instructions {
+  width: 101%;
+  background: rgba(255, 255, 255, 0.5);
   font-weight: 400;
   font-size: 1.5em;
+}
+
+.card-transform {
+  transform: rotateY(180deg);
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
 }
