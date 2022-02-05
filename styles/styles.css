@@ -7,7 +7,6 @@ body {
 
 .wrapper {
   text-align: center;
-    width: 100%;
     margin: auto;
     background-image: url(../images/background.jpg);
     padding: 15px;
@@ -20,6 +19,7 @@ body {
 }
 
 #card {
+  min-width: 150px;
   width: 30%;
   height: auto;
   margin-top: 15px;
@@ -62,10 +62,11 @@ body {
 }
 
 #viewCardsWrap {
-  padding: 10px 20px;
+  padding: 5px 10px;
   position: absolute;
   z-index: 9999;
   margin-top: 15px;
+  text-align: center;
 }
 
 .viewCards img {
@@ -83,22 +84,30 @@ body {
 
 .numberCards {
   color: #FFF;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 1.25em;
-  font-weight: bold;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 5px 10px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: rgb(0, 0, 0 , 0.5);
 }
 
 #instructions {
-  width: 101%;
+  padding: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   background: rgba(255, 255, 255, 0.5);
   font-weight: 400;
   font-size: 1.5em;
 }
 
 .card-transform {
-  transform: rotateY(180deg);
+  transform: rotateY(360deg);
   transition: all 0.5s ease;
   transform-style: preserve-3d;
 }

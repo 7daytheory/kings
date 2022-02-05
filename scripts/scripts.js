@@ -7,7 +7,7 @@ const viewCards = document.querySelector('.viewCards');
 const cardsWrap = document.querySelector('#viewCardsWrap');
 const viewUsed = document.querySelector('#used');
 
-let cardsArray = [
+const arrayOriginal = [
   {card:"2C", instruction:"Two is You!"},
   {card:"2D", instruction:"Two is You!"},
   {card:"2S", instruction:"Two is You!"},
@@ -62,12 +62,21 @@ let cardsArray = [
   {card:"AH", instruction: "Waterfall!"},
 ];
 
+//Set localstorage
+localStorage.setItem("cards", JSON.stringify(arrayOriginal));
 
+//Make an editable array for use in the game
+let cardsArray = JSON.parse(localStorage.cards);
+
+//OnClick Event
 button.addEventListener('click', () => {
   
   if(cardsArray.length - 1 > 0) {
   //Get Random number inside array length
   let random_num = Math.ceil(Math.random() * cardsArray.length - 1);
+  
+  //Add Animation Style to Card
+  animateCard();
   
   //Get Image Src
   card.src = 'images/' + cardsArray[random_num].card + '.png';
@@ -84,7 +93,8 @@ button.addEventListener('click', () => {
   //Update Deck
   numberCards.innerHTML = 'Cards Remaining : ' + cardsArray.length;
   
-  console.log(JSON.stringify(cardsArray[random_num]));
+  //Update localstorage
+  localStorage.setItem("cards", JSON.stringify(cardsArray));
 } else {
   
   //Change Instructions
@@ -95,6 +105,7 @@ button.addEventListener('click', () => {
 }
 });
 
+//Toggle Used Cards
 viewUsed.addEventListener('click', () => {
   console.log("clicked");
     if(viewCardsWrap.style.display === "none") {
@@ -105,5 +116,13 @@ viewUsed.addEventListener('click', () => {
       viewUsed.innerHTML = "View used cards";
     }
 })
+
+function animateCard() {
+  card.classList.add("card-transform");
+}
+
+function removeAnimation() {
+  card.classList.remove("card-transform");
+}
 
 
