@@ -133,4 +133,9 @@ back.addEventListener("click" , () => {
 	location.replace("index.html");
 })
 
+button.addEventListener("click", () => {
+	var audio = new Audio("http://localhost/kings/sounds/flipCard.mp3");
+  audio.play();
+})
+
 
