@@ -8,6 +8,8 @@ const viewCardsWrap = document.querySelector('#viewCardsWrap');
 const viewUsed = document.querySelector('#used');
 
 //Get new or resume game
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
 const game = urlParams.get('game');
 
 const arrayOriginal = [
@@ -72,6 +74,8 @@ cardsArray = arrayOriginal;
 localStorage.setItem("cards", JSON.stringify(cardsArray));
 } else {
 cardsArray = JSON.parse(localStorage.cards);
+//Update Deck
+  numberCards.innerHTML = 'Cards Remaining : ' + cardsArray.length;
 }
 
 //OnClick Event
