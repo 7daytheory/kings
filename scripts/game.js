@@ -79,6 +79,14 @@ cardsArray = JSON.parse(localStorage.cards);
   numberCards.innerHTML = 'Cards Remaining : ' + cardsArray.length;
 }
 
+window.addEventListener("load", () => {
+	var shuffle = new Audio("sounds/shuffleDeck.mp3");
+  		let intervalID = setTimeout(() => {
+ // this code runs every second
+		shuffle.play();
+}, 500);
+})
+
 //OnClick Event
 button.addEventListener('click', () => {
   
@@ -134,8 +142,11 @@ back.addEventListener("click" , () => {
 })
 
 button.addEventListener("click", () => {
-	var audio = new Audio("http://localhost/kings/sounds/flipCard.mp3");
-  audio.play();
+	var cardflip = new Audio("sounds/flipCard.mp3");
+	let intervalID = setTimeout(() => {
+ // this code runs every second
+		cardflip.play();
+}, 100);
 })
 
 
