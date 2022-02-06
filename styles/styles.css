@@ -5,6 +5,10 @@ body {
   overflow-x: hidden;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .wrapper {
   text-align: center;
     margin: auto;
@@ -14,20 +18,11 @@ body {
 }
 
 .wrapper h1 {
-  font-weight: bold;
-    padding: 5px 10px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    background: rgb(0, 0, 0 , 0.5);
-    border: none;
-    width: 50%;
-	margin: 35px auto 20px;
-    color: #fff;
+  margin-top: 35px;
+  color: #FFF;
 }
 
 #card {
-max-width: 300px;
   min-width: 150px;
   width: 30%;
   height: auto;
@@ -48,7 +43,7 @@ max-width: 300px;
 }
 
 .btn:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .sideBtn {
@@ -96,13 +91,13 @@ max-width: 300px;
     position: absolute;
     top: 5px;
     right: 10px;
-    font-size: 1em;
+    font-size: 1.25em;
     font-weight: bold;
     padding: 5px 10px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    background: #333;
+    background: rgb(0, 0, 0 , 0.5);
 }
 
 #instructions {
@@ -119,59 +114,4 @@ max-width: 300px;
   transform: rotateY(360deg);
   transition: all 0.5s ease;
   transform-style: preserve-3d;
-}
-
-#homescreen_prompt {
-	background: #FFF;
-	position: absolute;
-   left: 50vh;
-	top: -10px;
-	padding: 10px 20px;
-	border-radius: 3px;
-   -moz-border-radius: 3px;
-   border: solid 1px #333;
-}
-
-.home_wrapper {
-	background-image: url(../images/background.jpg);
-    padding: 15px;
-	min-height: 700px;
-	height: 100%;
-	width: auto;
-	overflow: hidden;
-	text-align: center;
-}
-
-.home_btn {
-	clear: both;
-	width: 60%;
-	margin: 10px auto;
-	padding: 10px 20px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-  	 border: solid 1px #333;
-	cursor: pointer;
-}
-
-.home_btn:hover {
-	opacity: 0.7;
-}
-
-.first_btn {
-	margin-top: 150px;
-}
-
-#back {
-	top: 5px;
-	left: 5px;
-	position: absolute;
-	color: #FFF;
-	background: #333;
-	padding: 5px 10px;
-	cursor: pointer;
-}
-
-#back:hover {
-	opacity: 0.8;
 }
