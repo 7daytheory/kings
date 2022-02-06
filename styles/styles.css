@@ -120,3 +120,40 @@ max-width: 300px;
   transition: all 0.5s ease;
   transform-style: preserve-3d;
 }
+
+#homescreen_prompt {
+	background: #FFF;
+	position: absolute;
+   left: 50vh;
+	top: -10px;
+	padding: 10px 20px;
+	border-radius: 3px;
+   -moz-border-radius: 3px;
+   border: solid 1px #333;
+}
+
+.home_wrapper {
+	background-image: url(../images/background.jpg);
+    padding: 15px;
+	min-height: 700px;
+	height: 100%;
+	width: auto;
+	overflow: hidden;
+	text-align: center;
+}
+
+.home_btn {
+	clear: both;
+	width: 60%;
+	margin: 10px auto;
+	padding: 10px 20px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+  	 border: solid 1px #333;
+	cursor: pointer;
+}
+
+.first_btn {
+	margin-top: 150px;
+}

@@ -4,8 +4,11 @@ const card = document.querySelector('#card');
 const instructions = document.querySelector('#instructions');
 const numberCards = document.querySelector('.numberCards');
 const viewCards = document.querySelector('.viewCards');
-const cardsWrap = document.querySelector('#viewCardsWrap');
+const viewCardsWrap = document.querySelector('#viewCardsWrap');
 const viewUsed = document.querySelector('#used');
+
+//Get new or resume game
+const game = urlParams.get('game');
 
 const arrayOriginal = [
   {card:"2C", instruction:"Two is You!"},
@@ -62,11 +65,14 @@ const arrayOriginal = [
   {card:"AH", instruction: "Waterfall!"},
 ];
 
+let cardsArray;
 //Set localstorage
-localStorage.setItem("cards", JSON.stringify(arrayOriginal));
-
-//Make an editable array for use in the game
-let cardsArray = JSON.parse(localStorage.cards);
+if(game === "new") {
+cardsArray = arrayOriginal;
+localStorage.setItem("cards", JSON.stringify(cardsArray));
+} else {
+cardsArray = JSON.parse(localStorage.cards);
+}
 
 //OnClick Event
 button.addEventListener('click', () => {
@@ -124,5 +130,11 @@ function animateCard() {
 function removeAnimation() {
   card.classList.remove("card-transform");
 }
+
+const homeBtns = document.querySelectorAll(".home_btn");
+
+homeBtns.addEventListener("click", (e) => {
+	console.log(e);
+})
 
 
