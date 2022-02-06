@@ -48,7 +48,7 @@ max-width: 300px;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .sideBtn {
@@ -154,6 +154,24 @@ max-width: 300px;
 	cursor: pointer;
 }
 
+.home_btn:hover {
+	opacity: 0.7;
+}
+
 .first_btn {
 	margin-top: 150px;
+}
+
+#back {
+	top: 5px;
+	left: 5px;
+	position: absolute;
+	color: #FFF;
+	background: #333;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+#back:hover {
+	opacity: 0.8;
 }

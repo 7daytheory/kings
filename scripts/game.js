@@ -6,6 +6,7 @@ const numberCards = document.querySelector('.numberCards');
 const viewCards = document.querySelector('.viewCards');
 const viewCardsWrap = document.querySelector('#viewCardsWrap');
 const viewUsed = document.querySelector('#used');
+const back = document.querySelector("#back");
 
 //Get new or resume game
 const queryString = window.location.search;
@@ -86,7 +87,9 @@ button.addEventListener('click', () => {
   let random_num = Math.ceil(Math.random() * cardsArray.length - 1);
   
   //Add Animation Style to Card
-  animateCard();
+  card.classList.remove("card-transform");
+	  
+  card.classList.add("card-transform"); 
   
   //Get Image Src
   card.src = 'images/' + cardsArray[random_num].card + '.png';
@@ -117,7 +120,6 @@ button.addEventListener('click', () => {
 
 //Toggle Used Cards
 viewUsed.addEventListener('click', () => {
-  console.log("clicked");
     if(viewCardsWrap.style.display === "none") {
         viewCardsWrap.style.display = "block";
         viewUsed.innerHTML = "Hide used cards";
@@ -127,18 +129,8 @@ viewUsed.addEventListener('click', () => {
     }
 })
 
-function animateCard() {
-  card.classList.add("card-transform");
-}
-
-function removeAnimation() {
-  card.classList.remove("card-transform");
-}
-
-const homeBtns = document.querySelectorAll(".home_btn");
-
-homeBtns.addEventListener("click", (e) => {
-	console.log(e);
+back.addEventListener("click" , () => {
+	location.replace("index.html");
 })
 
 
