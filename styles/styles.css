@@ -135,11 +135,19 @@ max-width: 300px;
 .home_wrapper {
 	background-image: url(../images/background.jpg);
     padding: 15px;
-	min-height: 700px;
+	min-height: 750px;
 	height: 100%;
 	width: auto;
 	overflow: hidden;
 	text-align: center;
+}
+
+.home_wrapper h1 {
+	margin: 10px auto;
+	padding: 10px 15px;
+	border: solid 1px #FFF;
+	color: #FFF;
+	background: rgb(255, 255,255, 0.3);
 }
 
 .home_btn {
@@ -159,7 +167,7 @@ max-width: 300px;
 }
 
 .first_btn {
-	margin-top: 150px;
+	margin-top: 100px;
 }
 
 #back {
