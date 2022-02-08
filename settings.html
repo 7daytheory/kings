@@ -13,24 +13,26 @@
       type="text/css"
       media="screen"
     />
-	  <link rel="manifest" href="manifest.json">
+	  <link rel="manifest" href="manifest.webmanifest">
   </head>
 
   <body>
 	  <div id="back">Home</div>
     <!-- Cards Remaining -->
 
-    <div class="wrapper" style="height:700px;">
+    <div class="wrapper">
       <h1>Settings</h1>
-      <h2>Edit each card's rule for the game</h2>
+      <h2>Edit card rules for game</h2>
 
-      <p class="italic">In progess - Coming soon</p>
+      <p class="italic"> In progess - Coming soon </p>
     </div>
-	  
-	<script>
-	 back.addEventListener("click" , () => {
-	location.replace("index.html");
-}) 
-	 </script>  
+    
+    <script>
+    const back = document.querySelector("#back");
+    
+    back.addEventListener("click" , () => {
+    	location.replace("index.html");
+    })
+    </script>
   </body>
 </html>

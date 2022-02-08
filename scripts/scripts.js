@@ -117,12 +117,3 @@ viewUsed.addEventListener('click', () => {
     }
 })
 
-function animateCard() {
-  card.classList.add("card-transform");
-}
-
-function removeAnimation() {
-  card.classList.remove("card-transform");
-}
-
-

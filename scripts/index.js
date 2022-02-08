@@ -9,8 +9,6 @@ settingsBtn.addEventListener("click", settingsGame);
 rateBtn.addEventListener("click", rateGame);
 
 function newGame() {
-	
-
 	location.replace("game.html?game=new");
 }
 
