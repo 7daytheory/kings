@@ -148,19 +148,20 @@ max-width: 300px;
 	padding: 10px 15px;
 	border: solid 1px #FFF;
 	color: #FFF;
-	background: rgb(255, 255,255, 0.3);
+	background: rgb(0, 0, 0, 0.4);
 }
 
 .home_btn {
-	clear: both;
-	width: 60%;
-	margin: 10px auto;
-	padding: 10px 20px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-  	 border: solid 1px #333;
-	cursor: pointer;
+  clear: both;
+    width: 80%;
+    margin: 15px auto;
+    padding: 15px 20px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: solid 1px #333;
+    cursor: pointer;
+    font-size: 1.25em;
 }
 
 .home_btn:hover {
@@ -168,7 +169,7 @@ max-width: 300px;
 }
 
 .first_btn {
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 #back {
@@ -198,20 +199,22 @@ max-width: 300px;
   color: #FFF;
   margin-top: 50px;
   padding: 10px;
-  background: rgb(0, 0, 0, 0.5);
+  background: rgb(0, 0, 0, 0.8);
   border-radius: 3px;
 }
 
 #editRules h3 {
-  color: #FFF;
-    background: rgb(0, 0, 0 , 0.5);
+  width: 80%;
+    margin: 20px auto;
+    color: #FFF;
+    background: rgb(0, 0, 0 , 0.7);
     padding: 3px;
     border-radius: 3px;
 }
 
 .settings_input {
   width: 80%;
-  padding: 3px;
+  padding: 7px;
   border: 1px solid #333;
   border-radius: 3px;
 }
@@ -224,5 +227,14 @@ max-width: 300px;
     border-radius: 3px;
     margin-top: 15px;
     cursor: pointer;
+}
+
+#king_card img {
+  position: fixed;
+    bottom: -100px;
+    width: 60%;
+    right: 0px;
+    max-width: 250px;
+    transform: rotate(-30deg);
 }
 
