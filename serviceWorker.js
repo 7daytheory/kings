@@ -6,4 +6,3 @@ self.addEventListener("sync", (e) => {
     console.log("SW Sync : No Sync Found");
   }
 });
-

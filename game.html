@@ -118,5 +118,12 @@ function hideA2hs()
   a2hsDiv.style.display = 'none'; 
 }
 </script>
+	  <script>
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+           .register('/kings/serviceWorker.js')
+           .then(function() { console.log("Service Worker Registered"); });
+}
+</script>	
   </body>
 </html>
