@@ -8,7 +8,11 @@ resumeBtn.addEventListener("click", resumeGame);
 settingsBtn.addEventListener("click", settingsGame);
 rateBtn.addEventListener("click", rateGame);
 
-const arrayOriginal = [
+let setCards;
+if(localStorage.getItem("cardSettings")) {
+	setCards = JSON.stringify(localStorage.getItem("cardSettings"));
+} else {
+setCards = [
   {card:"2C", instruction:"Two is You!"},
   {card:"2D", instruction:"Two is You!"},
   {card:"2S", instruction:"Two is You!"},
@@ -62,8 +66,8 @@ const arrayOriginal = [
   {card:"AS", instruction: "Waterfall!"},
   {card:"AH", instruction: "Waterfall!"},
 ];
-
-localStorage.setItem("cardSettings", JSON.stringify(arrayOriginal));
+localStorage.setItem("cardSettings", JSON.stringify(setCards));
+}
 
 function newGame() {
 	location.replace("game.html?game=new");

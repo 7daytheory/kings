@@ -16,13 +16,6 @@ const game = urlParams.get('game');
 
 let cardsArray;
 
-if(localStorage.getItem("customSettings")) {
-  cardsArray = JSON.parse(localStorage.getItem("customSettings"));
-  localstorage.setItem("cards"), JSON.stringify(cardsArray);
-} else {
-  cardsArray = localStorage.getItem("cardSettings");
-}
-
 //Set localstorage
 if(game === "new") {
 cardsArray = JSON.parse(localStorage.getItem("cardSettings"));

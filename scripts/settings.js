@@ -31,6 +31,87 @@ showSettings.innerHTML ="<h3>Twos</h3>" +
 "<button onClick='editSettings()' class='settings_btn'>Save Settings</button";
 
 function editSettings() {
-  console.log("Edit Settings!");
+  const twos = document.getElementById("two").value;
+  const threes = document.getElementById("three").value;
+  const fours = document.getElementById("four").value;
+  const fives = document.getElementById("five").value;
+  const sixes = document.getElementById("six").value;
+  const sevens = document.getElementById("seven").value;
+  const eights = document.getElementById("eight").value;
+  const nines = document.getElementById("nine").value;
+  const tens = document.getElementById("ten").value;
+  const jacks = document.getElementById("jack").value;
+  const queens = document.getElementById("queen").value;
+  const kings = document.getElementById("king").value;
+  const aces = document.getElementById("ace").value;
+  
+  cardSettings[0].instruction = twos;
+  cardSettings[1].instruction = twos;
+  cardSettings[2].instruction = twos;
+  cardSettings[3].instruction = twos;
+  
+  cardSettings[4].instruction = threes;
+  cardSettings[5].instruction = threes;
+  cardSettings[6].instruction = threes;
+  cardSettings[7].instruction = threes;
+  
+  cardSettings[8].instruction = fours;
+  cardSettings[9].instruction = fours;
+  cardSettings[10].instruction = fours;
+  cardSettings[11].instruction = fours;
+  
+  cardSettings[12].instruction = fives;
+  cardSettings[13].instruction = fives;
+  cardSettings[14].instruction = fives;
+  cardSettings[15].instruction = fives;
+  
+  cardSettings[16].instruction = sixes;
+  cardSettings[17].instruction = sixes;
+  cardSettings[18].instruction = sixes;
+  cardSettings[19].instruction = sixes;
+  
+  cardSettings[20].instruction = sevens;
+  cardSettings[21].instruction = sevens;
+  cardSettings[22].instruction = sevens;
+  cardSettings[23].instruction = sevens;
+  
+  cardSettings[24].instruction = eights;
+  cardSettings[25].instruction = eights;
+  cardSettings[26].instruction = eights;
+  cardSettings[27].instruction = eights;
+  
+  cardSettings[28].instruction = nines;
+  cardSettings[29].instruction = nines;
+  cardSettings[30].instruction = nines;
+  cardSettings[31].instruction = nines;
+  
+  cardSettings[32].instruction = tens;
+  cardSettings[33].instruction = tens;
+  cardSettings[34].instruction = tens;
+  cardSettings[35].instruction = tens;
+  
+  cardSettings[36].instruction = jacks;
+  cardSettings[37].instruction = jacks;
+  cardSettings[38].instruction = jacks;
+  cardSettings[39].instruction = jacks;
+  
+  cardSettings[40].instruction = queens;
+  cardSettings[41].instruction = queens;
+  cardSettings[42].instruction = queens;
+  cardSettings[43].instruction = queens;
+  
+  cardSettings[44].instruction = kings;
+  cardSettings[45].instruction = kings;
+  cardSettings[46].instruction = kings;
+  cardSettings[47].instruction = kings;
+  
+  cardSettings[48].instruction = aces;
+  cardSettings[49].instruction = aces;
+  cardSettings[50].instruction = aces;
+  cardSettings[51].instruction = aces;
+  
+  localStorage.setItem("cardSettings", JSON.stringify(cardSettings));
+  
+  location.replace("settings.html");
 }
 
