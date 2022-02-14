@@ -2,7 +2,7 @@ let cardSettings = JSON.parse(localStorage.getItem("cardSettings"));
 
 const showSettings = document.getElementById("editRules");
 
-showSettings.innerHTML = "<h3>Twos</h3>" +
+showSettings.innerHTML ="<h3>Twos</h3>" +
 "<input id='two' class='settings_input' value='" + cardSettings[0].instruction + "'></input>" +
 "<h3>Threes</h3>" +
 "<input id='three' class='settings_input' value='" + cardSettings[5].instruction + "'></input>" +
@@ -27,5 +27,10 @@ showSettings.innerHTML = "<h3>Twos</h3>" +
 "<h3>Kings</h3>" +
 "<input id='king' class='settings_input' value='" + cardSettings[45].instruction + "'></input>" +
 "<h3>Aces</h3>" +
-"<input id='ace' class='settings_input' value='" + cardSettings[49].instruction + "'></input>";
+"<input id='ace' class='settings_input' value='" + cardSettings[49].instruction + "'></input>" +
+"<button onClick='editSettings()' class='settings_btn'>Save Settings</button";
+
+function editSettings() {
+  console.log("Edit Settings!");
+}
 
