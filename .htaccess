@@ -1,3 +1,0 @@
-#Force www:
-RewriteCond %{HTTP_HOST} ^mattjlowe.com [NC]
-RewriteRule ^(.*)$ https://www.mattjlowe.com/$1 [L,R=301,NC] 

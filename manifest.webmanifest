@@ -26,7 +26,9 @@
       "sizes": "512x512",
       "type": "image/png"
     }],
+  "id": "Cardless Kings",
   "start_url": "/kings/index.html",
+  "description": "Simple Cardless Kings Drinking Game",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#333"

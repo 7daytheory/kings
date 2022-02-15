@@ -82,5 +82,5 @@ function settingsGame() {
 }
 
 function rateGame() {
-	prompt("Rate us 5 stars!");
+	prompt("Coming Soon!");
 }

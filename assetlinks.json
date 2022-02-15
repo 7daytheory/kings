@@ -1,0 +1,6 @@
+[{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "com.mattjlowe.www.twa",
+                     "sha256_cert_fingerprints": ["45:E6:0F:24:80:5D:DD:80:CC:C1:0A:46:F7:6B:F7:7A:03:7E:79:B4:FB:A9:31:6B:95:67:82:E3:AC:3F:EB:B1"] }
+      }
+]

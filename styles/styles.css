@@ -122,16 +122,45 @@ max-width: 300px;
   transform-style: preserve-3d;
 }
 
+
+/**** Homescreen prompt ****/
 #homescreen_prompt {
 	background: #FFF;
 	position: absolute;
-   left: 50vh;
+   left: 45vw;
 	top: -10px;
 	padding: 10px 20px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
 	border-radius: 3px;
-   -moz-border-radius: 3px;
    border: solid 1px #333;
 }
+
+#homescreen_prompt button {
+	border-radius: 3px;
+    margin-left: 7px;
+    font-size: 13px;
+    min-width: 60px;
+    float: right;
+    cursor: pointer;
+	margin-top: 10px;
+}
+
+#a2hsCancelBtn {
+	border: 1px solid #DDD;
+    padding: 6px 16px;
+    background: #FFF;
+    color: #4787ee;
+}
+
+#a2hsBtn {
+	border: none;
+    padding: 6px 10px;
+    background: #1a73e8;
+    color: #FFF;
+}
+
+/***** Home Wrapper *****/
 
 .home_wrapper {
 	background-image: url(../images/background.jpg);
