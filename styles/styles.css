@@ -127,16 +127,18 @@ max-width: 300px;
 
 /**** Homescreen prompt ****/
 #homescreen_prompt {
+	text-align:center;
+	opacity: 0;
 	background: #FFF;
 	position: absolute;
-   	left: 10px;
+   	left: 65px;
 	top: -10px;
 	padding: 10px 20px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
    border: solid 1px #333;
-	width: 200px;
+	width: 235px;
 }
 
 #homescreen_prompt button {
@@ -151,16 +153,18 @@ max-width: 300px;
 
 #a2hsCancelBtn {
 	border: 1px solid #DDD;
-    padding: 6px 16px;
+    padding: 8px 16px;
     background: #FFF;
     color: #4787ee;
+	font-size:1.2em;
 }
 
 #a2hsBtn {
 	border: none;
-    padding: 6px 10px;
+    padding: 8px 12px;
     background: #1a73e8;
     color: #FFF;
+	font-size: 1.2em;
 }
 
 /***** Home Wrapper *****/
