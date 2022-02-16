@@ -82,5 +82,5 @@ function settingsGame() {
 }
 
 function rateGame() {
-	prompt("Coming Soon!");
+	alert("Coming Soon!");
 }
