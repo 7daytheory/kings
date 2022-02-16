@@ -139,6 +139,7 @@ max-width: 300px;
 	border-radius: 3px;
    border: solid 1px #333;
 	width: 235px;
+	transition-duration: 0.3s;
 }
 
 #homescreen_prompt button {
