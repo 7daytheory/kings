@@ -72,8 +72,7 @@ function hideA2hs()
   var a2hsDiv = document.getElementById("homescreen_prompt");
   a2hsDiv.style.display = 'none'; 
 }
-	  </script>
-	  <script>
+
 if('serviceWorker' in navigator) {
   navigator.serviceWorker
            .register('/kings/serviceWorker.js')
