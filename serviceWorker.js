@@ -1,3 +1,13 @@
+const filelist = [ '/kings/index.html',
+        '/kings/game.html',
+        '/kings/settings.html',
+        '/kings/styles/styles.css',
+        '/kings/scripts/games.js',
+        '/kings/scripts/index.js',
+        '/kings/scripts/scripts.js',
+        '/kings/scripts/settings.js'
+		];
+
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
@@ -7,18 +17,6 @@ self.addEventListener('install', function(event) {
     })
   );
 });
-
-let filelist = [ '/kings/index.html',
-        '/kings/game.html',
-        '/kings/settings.html',
-        '/kings/styles/styles.css',
-        '/kings/scripts/games.js',
-        '/kings/scripts/index.js',
-        '/kings/scripts/scripts.js',
-        '/kings/scripts/settings.js',
-		'/kings/manifest.webmanifest',
-		'/kings/sounds/flipCard.mp3',
-		'/kings/sounds/shuffleDeck.mp3'];
 
 
 self.addEventListener('fetch', function(event) {
