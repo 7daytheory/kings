@@ -27,8 +27,8 @@ showSettings.innerHTML ="<h3>Twos</h3>" +
 "<h3>Kings</h3>" +
 "<input id='king' class='settings_input' value='" + cardSettings[45].instruction + "'></input>" +
 "<h3>Aces</h3>" +
-"<input id='ace' class='settings_input' value='" + cardSettings[49].instruction + "'></input>" +
-"<button onClick='editSettings()' class='settings_btn'>Save Settings</button";
+"<input id='ace' class='settings_input' value='" + cardSettings[49].instruction + "'></input><br>" +
+"<button onClick='editSettings()' class='settings_btn'>SAVE SETTINGS</button";
 
 function editSettings() {
   const twos = document.getElementById("two").value;
