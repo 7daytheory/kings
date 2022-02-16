@@ -66,6 +66,7 @@ max-width: 300px;
     -moz-border-radius: 3px;
     border-radius: 3px;
     margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .sideBtn:hover {
