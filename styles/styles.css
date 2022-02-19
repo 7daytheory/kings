@@ -29,6 +29,11 @@ body {
       color: #fff;
 }
 
+.button_wrapper {
+	z-index: 2;
+    position: relative;
+}
+
 #card {
   max-width: 207px;
   min-width: 150px;
@@ -137,13 +142,16 @@ body {
 	opacity: 0;
 	background: #FFF;
 	position: absolute;
-   	left: 65px;
+   	left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 	top: -10px;
 	padding: 10px 20px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
-   border: solid 1px #333;
+   	border: solid 1px #333;
 	width: 235px;
 	transition-duration: 0.3s;
 }
@@ -289,11 +297,11 @@ body {
 }
 
 #king_card img {
-  position: fixed;
-    bottom: -200px;
-    width: 60%;
-    left: 25px;
-    max-width: 250px;
+  	position: fixed;
+    bottom: -210px;
+    left: 10vw;
+    width: 200px;
     transform: rotate(30deg);
+	z-index: 1;
 }
 
