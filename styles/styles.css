@@ -9,7 +9,7 @@ body {
   text-align: center;
     margin: auto;
     background-image: url(../images/background.jpg);
-	height: 100vh;
+	height: 80vh;
     padding: 15px;
     border-bottom: 5px solid #333;
 }
@@ -25,12 +25,12 @@ body {
       border: none;
       font-size: 1.75em;
       width: 75%;
-      margin: 45px auto 20px;
+      margin: 65px auto 20px;
       color: #fff;
 }
 
 #card {
-max-width: 300px;
+  max-width: 207px;
   min-width: 150px;
   width: 30%;
   height: auto;
@@ -42,6 +42,7 @@ max-width: 300px;
   font-size: 1.5em;
   padding: 10px 15px;
   margin: 15px;
+  font-size: 1em;	
   background: #333;
   color: #fff;
   cursor: pointer;
@@ -120,6 +121,7 @@ max-width: 300px;
   font-size: 1.5em;
 	margin: 20px auto;
 	width: 90%;
+	border-bottom: 2px solid #333;
 }
 
 .card-transform {
@@ -215,13 +217,17 @@ max-width: 300px;
 }
 
 #back {
-	top: 5px;
-	left: 5px;
+	top: 10px;
+	left: 10px;
 	position: absolute;
 	color: #FFF;
 	background: #333;
-	padding: 5px 10px;
+	font-size: 1.1em;
+	padding: 7px 12px;
 	cursor: pointer;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
 }
 
 #back:hover {
@@ -240,6 +246,7 @@ max-width: 300px;
 .settings_wrapper h1 {
   color: #FFF;
   max-width: 700px;
+	margin: auto;
   margin-top: 50px;
   padding: 10px;
   background: rgb(0, 0, 0, 0.8);
@@ -277,6 +284,7 @@ max-width: 300px;
     border: none;
     border-radius: 5px;
     margin-top: 15px;
+	margin-bottom: 15px;
     cursor: pointer;
 }
 
