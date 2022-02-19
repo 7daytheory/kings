@@ -15,7 +15,8 @@ body {
 }
 
 .wrapper h1 {
-  font-weight: bold;
+	max-width: 600px;
+  	font-weight: bold;
       padding: 5px 10px;
       -moz-border-radius: 3px;
       -webkit-border-radius: 3px;
@@ -109,6 +110,7 @@ max-width: 300px;
 }
 
 #instructions {
+	max-width: 600px;
   padding: 5px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -116,6 +118,8 @@ max-width: 300px;
   background: rgba(255, 255, 255, 0.65);
   font-weight: 400;
   font-size: 1.5em;
+	margin: 20px auto;
+	width: 90%;
 }
 
 .card-transform {
@@ -180,6 +184,7 @@ max-width: 300px;
 }
 
 .home_wrapper h1 {
+	max-width: 700px;
 	margin: 10px auto;
 	padding: 10px 15px;
 	border: solid 1px #FFF;
@@ -188,6 +193,7 @@ max-width: 300px;
 }
 
 .home_btn {
+	max-width: 600px;
   clear: both;
     width: 80%;
     margin: 15px auto;
@@ -233,10 +239,19 @@ max-width: 300px;
 
 .settings_wrapper h1 {
   color: #FFF;
+  max-width: 700px;
   margin-top: 50px;
   padding: 10px;
   background: rgb(0, 0, 0, 0.8);
   border-radius: 3px;
+}
+
+#editRules {
+  	max-width: 700px;
+	margin: auto;
+	background: #DDD;
+	border: 1px solid #333;
+	border-radius: 5px;
 }
 
 #editRules h3 {
