@@ -5,6 +5,10 @@ body {
   overflow-x: hidden;
 }
 
+.italic {
+	font-style: italic;
+}
+
 .wrapper {
   text-align: center;
     margin: auto;
